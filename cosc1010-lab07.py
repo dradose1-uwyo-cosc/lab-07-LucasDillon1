@@ -5,6 +5,8 @@
 # Lab Section: 16
 # Sources, people worked with, help given to: NA
 # 
+# I had some struggles remembering to check whether the given input was a number...
+#
 
 # Prompt the user for an upper bound 
 # Write a while loop that gives the factorial of that upper bound
@@ -23,7 +25,7 @@ while True:
         upper_bound = int(upper_bound)
         for i in range(1, upper_bound + 1):
             factorial = factorial * i
-        print(f"\nThe result of the factorial based on the given bound is {factorial}\n")
+        print(f"\nThe result of the factorial based on the given bound ({upper_bound}) is {factorial}\n")
         break
     else:
         print("\nThe upper bound given is not an integer, and will not work.\n")
@@ -105,11 +107,20 @@ while True:
             op = op.split(character)
             operator = character
 
+
+# The hastily thrown together check for if op[0] and op[1] are numbers. This was a quick fix for an introduced issue.
+    if not op[0].isdigit():
+        print("The first number is not an integer.\n")
+        continue
+    if not op[1].isdigit():
+        print("The second number is not an integer.\n")
+        continue
+
 # Makes op hold integers
     op[0] = int(op[0])
     op[1] = int(op[1])
 
-# I gave up on a for loop for now. Super inefficient below.
+# I gave up on a for loop for now. Super inefficient stuff below. I think I would have to import a new library...
     if operator == "+":
         new_num = op[0] + op[1]
 
