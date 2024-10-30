@@ -4,4 +4,4 @@
 ## Worked with/sources: 
 * NA
 ## Project Quirks/ Things that don't work
-* NA
+* Some parts of the project were very inefficient and could have been written better.
